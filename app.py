@@ -63,7 +63,7 @@ def initialize():
                 employee_id TEXT NOT NULL, action TEXT NOT NULL, detail TEXT NOT NULL);
         ''')
         if not c.execute('SELECT 1 FROM users LIMIT 1').fetchone():
-            c.execute('INSERT INTO users VALUES (?,?,?,1)', ('M100', password_hash('HotelDemo2026!'), 'manager'))
+            c.execute('INSERT INTO users VALUES (?,?,?,1)', ('Tirth Patel', password_hash('Tirth@104'), 'manager'))
             c.execute('INSERT INTO users VALUES (?,?,?,1)', ('S101', password_hash('StaffDemo2026!'), 'staff'))
         if not c.execute('SELECT 1 FROM categories LIMIT 1').fetchone():
             c.executemany('INSERT INTO categories(name) VALUES (?)',

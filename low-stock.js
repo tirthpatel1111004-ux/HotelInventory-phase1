@@ -1,0 +1,1 @@
+(async()=>{if(!await setup())return;try{const {items}=await api('/low-stock');document.getElementById('result').innerHTML=table(items);note(items.length+' low-stock item(s)');}catch(e){note(e.message);}})();

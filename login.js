@@ -1,0 +1,1 @@
+document.getElementById('login').onsubmit=async e=>{e.preventDefault();try{await api('/login','POST',{employee_id:document.getElementById('employee_id').value,password:document.getElementById('password').value});location.href='/inventory';}catch(e){note(e.message);}};
